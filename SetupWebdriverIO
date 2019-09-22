@@ -1,3 +1,22 @@
 Useful Reference
 https://webdriver.io/docs/gettingstarted.html
 http://v4.webdriver.io/guide/getstarted/install.html
+
+
+Install brew
+Install Node with brew
+Use Visual Studio Code as IDE (optional recommendation)
+Or Install WebdriverIO via terminal (Install in the same folder as the Test Code)
+
+- Create a package json  (similar to maven or nugget)
+-- npm init -y
+- Install WebdriverIO CLI
+-- npm i --save-dev @wdio/cli
+- Generate configuration file
+-- ./node_modules/.bin/wdio config
+-- answer questions
+- Create spec files
+-- mkdir -p ./test/specs
+-- touch ./test/specs/basic.js
+- Kick off Testrunner
+-- ./node_modules/.bin/wdio wdio.conf.js
