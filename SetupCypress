@@ -1,2 +1,15 @@
 Useful Reference
 https://testautomationu.applitools.com/cypress-tutorial
+
+
+Install brew
+Install Node with brew
+Use Visual Studio Code as IDE - optional recommendation
+Install Cypress via VSC (Install in the same folder as the Test Code)
+
+- Create a package json (similar to maven or nugget)
+-- npm init -y
+- Install Cypress
+-- npm install cypress@3
+- Open Cypress
+-- npx cypress open
