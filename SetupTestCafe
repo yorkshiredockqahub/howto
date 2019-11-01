@@ -1,0 +1,24 @@
+Ensure that Node.js and npm are installed on your computer and run the following command:
+
+For Global
+  npm install -g testcafe
+Run
+  testcafe chrome tests/
+
+
+For Local - dev dependency
+  npm install --save-dev testcafe
+
+Run on local
+  the npx command:
+    npx testcafe chrome tests/
+  the yarn run command:
+    yarn run testcafe chrome tests/
+  npm scripts - add the testcafe command to the scripts section in package.json:
+    "scripts": {
+      "test": "testcafe chrome tests/"
+    }
+    
+    
+ Note - Grant permission for TestCafe Browser Tools
+  - System Preferences - Security & Privacy - Screen Recording/Automations
