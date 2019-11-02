@@ -1,0 +1,43 @@
+Useful Reference
+- https://testautomationu.applitools.com/webdriverio-tutorial/chapter1.2.html
+
+Create Folder
+- npm init (to setup npm package)
+npm init - gives you the option to complete details for package.json
+- Fill in details
+Install WebdriverIO
+- npm install webdriverio  --save-dev(save-dev as dev dependency for ease of install on another computer)
+Post webdriverio install
+- all dependency packages are stored in node_modules
+- check correct installation in package.json in devDependencies tag
+Create wdio Config File with command line for ease of creation
+- npm install @wdio/cli
+Then
+- ./node_modules/.bin/wdio config
+complete questions - WDIO Configuration Helper
+-- Mocha, dot n specs, chrome n selenium-standalone, baseurl
+- Location of Test, Framework, Reporters, Browsers, General configuration
+- wdio.conf.js is created (wdio packages installed)
+
+Then install chai - Assertion Library
+- npm install chai --save-dev
+Then
+- npm install chai-webdriverio --save-dev
+Install local runner
+- npm install local-runner --save-dev
+
+
+Setup to use Chai Assertion throughout the Project
+Edit config file to add Chai Assertion - global assertion, should n expect
+- wdio.conf.js
+- write beforeTest function into wdio.conf.js
+  ""
+        const chai = require('chai')
+        const chaiWebdriver = require('chai-webdriverio').default
+
+        chai.use(chaiWebdriver(browser))
+
+        global.assert = chai.assert
+        global.should = chai.should
+        global.expect = chai.expect
+  ""       
